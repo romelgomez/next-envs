@@ -1,5 +1,4 @@
 export default function Home() {
-
   const NEXT_PUBLIC_EXAMPLE_ENV_VAR = process.env.NEXT_PUBLIC_EXAMPLE_ENV_VAR;
   const SECRET_KEY = process.env.SECRET_KEY;
 
@@ -14,4 +13,3 @@ export default function Home() {
     </div>
   );
 }
-
