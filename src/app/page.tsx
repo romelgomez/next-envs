@@ -16,7 +16,6 @@ export default function Home() {
       <h1>Experiment Two</h1>
 
       <LogEnvVarButton />
-
     </div>
   );
 }
