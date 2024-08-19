@@ -22,9 +22,14 @@ const LogEnvVarButton: React.FC = () => {
         Log Environment Variable
       </button>
 
-      <div>NEXT_PUBLIC_EXAMPLE_ENV_VAR: {NEXT_PUBLIC_EXAMPLE_ENV_VAR}</div>
       <br />
-      <div>SECRET_KEY: {SECRET_KEY}</div>
+      <br />
+
+      <div>NEXT_PUBLIC_EXAMPLE_ENV_VAR: {NEXT_PUBLIC_EXAMPLE_ENV_VAR}</div>
+
+      <br />
+
+      <b>The SECRET_KEY, as this is a client component should be undefined, visible in the log</b>
     </div>
   );
 };

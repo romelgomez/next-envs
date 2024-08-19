@@ -6,14 +6,13 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Experiment One</h1>
-      <h3>Show/use env var from railway.app variable interface</h3>
+      <h1>Experiment One - Server component</h1>
 
       <div>NEXT_PUBLIC_EXAMPLE_ENV_VAR: {NEXT_PUBLIC_EXAMPLE_ENV_VAR}</div>
       <br />
       <div>SECRET_KEY: {SECRET_KEY}</div>
 
-      <h1>Experiment Two</h1>
+      <h1>Experiment Two - Client component</h1>
 
       <LogEnvVarButton />
     </div>
