@@ -24,9 +24,6 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/static ./.next/static
 
-ARG NEXT_PUBLIC_EXAMPLE_API_KEY
-ENV NEXT_PUBLIC_EXAMPLE_API_KEY=${NEXT_PUBLIC_EXAMPLE_API_KEY}
-
 EXPOSE 3000
 
 ENV PORT 3000
