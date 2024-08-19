@@ -29,7 +29,10 @@ const LogEnvVarButton: React.FC = () => {
 
       <br />
 
-      <b>The SECRET_KEY, as this is a client component should be undefined, visible in the log</b>
+      <b>
+        The SECRET_KEY, as this is a client component should be undefined,
+        visible in the log
+      </b>
     </div>
   );
 };
