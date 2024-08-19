@@ -14,7 +14,7 @@ ENV NODE_ENV=${NODE_ENV}
 ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY . .
-COPY --from=deps /node_modules ./node_modules
+COPY --from=deps /app/node_modules ./node_modules
 RUN npm run build
 
 FROM node:20-alpine AS runner
