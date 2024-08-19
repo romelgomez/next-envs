@@ -14,6 +14,11 @@ COPY . .
 
 COPY --from=deps /app/node_modules ./node_modules
 
+ARG NEXT_PUBLIC_EXAMPLE_ENV_VAR
+ARG SECRET_KEY
+ENV NEXT_PUBLIC_EXAMPLE_API_KEY=${NEXT_PUBLIC_EXAMPLE_API_KEY}
+ENV SECRET_KEY=${SECRET_KEY}
+
 RUN npm run build
 
 FROM node:20-alpine AS runner
