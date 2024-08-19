@@ -30,7 +30,9 @@ ENV PORT 3000
 
 CMD HOSTNAME="0.0.0.0" node server.js
 
+# This happened in railway.app
 # Error: Cannot find module 'next/dist/compiled/find-up'
+# Fixed with: npm i find-up
 
 # docker build --progress=plain --no-cache -t maryline/nextjs-example:0.0.1 -f Dockerfile .
 
