@@ -6,29 +6,15 @@ RUN npm ci
 
 FROM node:20-alpine AS builder
 
-WORKDIR /app
-
-ARG NODE_ENV=development
-
-ENV NODE_ENV=${NODE_ENV}
-ENV NEXT_TELEMETRY_DISABLED=1
-
 COPY . .
 COPY --from=deps /node_modules ./node_modules
 RUN npm run build
 
 FROM node:20-alpine AS runner
 
-WORKDIR /app
-
-ARG NODE_ENV=development
-
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=${NODE_ENV}
-
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /.next/standalone ./
+COPY --from=builder /public ./public
+COPY --from=builder /.next/static ./.next/static
 
 EXPOSE 3000
 
