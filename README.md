@@ -1,6 +1,6 @@
 # NextJS Environment Experiments
 
-The intention is to have a more close to production template for NextJS that will work in any cloud provider with docker and not with Vercel, with Vercel is a breeze to have this setting but more expensive. The most affordable (at this commit) provider that I know is  is railway.app.
+The intention is to have a more close to production template for NextJS that will work in any cloud provider with docker and not with Vercel, with Vercel is a breeze to have this setting but more expensive. The most affordable (at this commit) provider that I know is railway.app.
 
 ## So we have two experiments with railway.app: 
 
@@ -8,8 +8,11 @@ The intention is to have a more close to production template for NextJS that wil
 
   With the code already here this experiment works fine!
 
+  ![](repo_images/clone_example.png)
+
 
 - [ ] The second one is clone the docker build from ghcr.io, a docker container registry.
   
   To-do: All the env var are undefined. 
 
+  ![](repo_images/ghcr_example.png)
